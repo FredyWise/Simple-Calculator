@@ -17,6 +17,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shape
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
@@ -28,6 +29,8 @@ fun Calculator(
     btnSpacing: Dp = 10.dp,
     onAction: (CalcAction) -> Unit,
     calculatorShape: Shape = MaterialTheme.shapes.small,
+    calcTextStyle: TextStyle = MaterialTheme.typography.displayLarge,
+    calcBtnStyle: TextStyle = MaterialTheme.typography.headlineSmall,
     textColor: Color = MaterialTheme.colorScheme.onSecondary,
     textBackgroundColor: Color = MaterialTheme.colorScheme.secondary,
     buttonTextColor: Color = MaterialTheme.colorScheme.onSecondary,
@@ -64,9 +67,9 @@ fun Calculator(
                     )
                     .padding(horizontal = 25.dp)
                     .weight(1f),
-                style = MaterialTheme.typography.displayLarge,
+                style = calcTextStyle,
                 color = textColor,
-                maxLines = 2
+                maxLines = 1
             )
             // First row (AC - Del - /)
             Row(
@@ -75,7 +78,8 @@ fun Calculator(
                     btnSpacing
                 )
             ) {
-                CalcButton(calcSymbol = "AC",
+                CalcButton(btnSymbol = "AC",
+                    btnStyle = calcBtnStyle,
                     textColor = buttonTextColor,
                     modifier = Modifier
                         .background(
@@ -90,7 +94,8 @@ fun Calculator(
                     onClick = {
                         onAction(CalcAction.Clear)
                     })
-                CalcButton(calcSymbol = "%",
+                CalcButton(btnSymbol = "%",
+                    btnStyle = calcBtnStyle,
                     textColor = buttonTextColor,
                     modifier = Modifier
                         .background(
@@ -105,7 +110,8 @@ fun Calculator(
                     onClick = {
                         onAction(CalcAction.Percent)
                     })
-                CalcButton(calcSymbol = "Del",
+                CalcButton(btnSymbol = "Del",
+                    btnStyle = calcBtnStyle,
                     textColor = buttonTextColor,
                     modifier = Modifier
                         .background(
@@ -120,7 +126,8 @@ fun Calculator(
                     onClick = {
                         onAction(CalcAction.Delete)
                     })
-                CalcButton(calcSymbol = "/",
+                CalcButton(btnSymbol = "/",
+                    btnStyle = calcBtnStyle,
                     textColor = buttonTextColor,
                     modifier = Modifier
                         .background(
@@ -147,7 +154,8 @@ fun Calculator(
                     btnSpacing
                 )
             ) {
-                CalcButton(calcSymbol = "7",
+                CalcButton(btnSymbol = "7",
+                    btnStyle = calcBtnStyle,
                     textColor = buttonTextColor,
                     modifier = Modifier
                         .background(
@@ -166,7 +174,8 @@ fun Calculator(
                             )
                         )
                     })
-                CalcButton(calcSymbol = "8",
+                CalcButton(btnSymbol = "8",
+                    btnStyle = calcBtnStyle,
                     textColor = buttonTextColor,
                     modifier = Modifier
                         .background(
@@ -185,7 +194,8 @@ fun Calculator(
                             )
                         )
                     })
-                CalcButton(calcSymbol = "9",
+                CalcButton(btnSymbol = "9",
+                    btnStyle = calcBtnStyle,
                     textColor = buttonTextColor,
                     modifier = Modifier
                         .background(
@@ -204,7 +214,8 @@ fun Calculator(
                             )
                         )
                     })
-                CalcButton(calcSymbol = "x",
+                CalcButton(btnSymbol = "x",
+                    btnStyle = calcBtnStyle,
                     textColor = buttonTextColor,
                     modifier = Modifier
                         .background(
@@ -231,7 +242,8 @@ fun Calculator(
                     btnSpacing
                 )
             ) {
-                CalcButton(calcSymbol = "4",
+                CalcButton(btnSymbol = "4",
+                    btnStyle = calcBtnStyle,
                     textColor = buttonTextColor,
                     modifier = Modifier
                         .background(
@@ -250,7 +262,8 @@ fun Calculator(
                             )
                         )
                     })
-                CalcButton(calcSymbol = "5",
+                CalcButton(btnSymbol = "5",
+                    btnStyle = calcBtnStyle,
                     textColor = buttonTextColor,
                     modifier = Modifier
                         .background(
@@ -269,7 +282,8 @@ fun Calculator(
                             )
                         )
                     })
-                CalcButton(calcSymbol = "6",
+                CalcButton(btnSymbol = "6",
+                    btnStyle = calcBtnStyle,
                     textColor = buttonTextColor,
                     modifier = Modifier
                         .background(
@@ -288,7 +302,8 @@ fun Calculator(
                             )
                         )
                     })
-                CalcButton(calcSymbol = "-",
+                CalcButton(btnSymbol = "-",
+                    btnStyle = calcBtnStyle,
                     textColor = buttonTextColor,
                     modifier = Modifier
                         .background(
@@ -315,7 +330,8 @@ fun Calculator(
                     btnSpacing
                 )
             ) {
-                CalcButton(calcSymbol = "1",
+                CalcButton(btnSymbol = "1",
+                    btnStyle = calcBtnStyle,
                     textColor = buttonTextColor,
                     modifier = Modifier
                         .background(
@@ -334,7 +350,8 @@ fun Calculator(
                             )
                         )
                     })
-                CalcButton(calcSymbol = "2",
+                CalcButton(btnSymbol = "2",
+                    btnStyle = calcBtnStyle,
                     textColor = buttonTextColor,
                     modifier = Modifier
                         .background(
@@ -353,7 +370,8 @@ fun Calculator(
                             )
                         )
                     })
-                CalcButton(calcSymbol = "3",
+                CalcButton(btnSymbol = "3",
+                    btnStyle = calcBtnStyle,
                     textColor = buttonTextColor,
                     modifier = Modifier
                         .background(
@@ -372,7 +390,8 @@ fun Calculator(
                             )
                         )
                     })
-                CalcButton(calcSymbol = "+",
+                CalcButton(btnSymbol = "+",
+                    btnStyle = calcBtnStyle,
                     textColor = buttonTextColor,
                     modifier = Modifier
                         .background(
@@ -399,7 +418,8 @@ fun Calculator(
                     btnSpacing
                 )
             ) {
-                CalcButton(calcSymbol = "0",
+                CalcButton(btnSymbol = "0",
+                    btnStyle = calcBtnStyle,
                     textColor = buttonTextColor,
                     modifier = Modifier
                         .background(
@@ -418,7 +438,8 @@ fun Calculator(
                             )
                         )
                     })
-                CalcButton(calcSymbol = "00",
+                CalcButton(btnSymbol = "00",
+                    btnStyle = calcBtnStyle,
                     textColor = buttonTextColor,
                     modifier = Modifier
                         .background(
@@ -437,7 +458,8 @@ fun Calculator(
                             )
                         )
                     })
-                CalcButton(calcSymbol = ".",
+                CalcButton(btnSymbol = ".",
+                    btnStyle = calcBtnStyle,
                     textColor = buttonTextColor,
                     modifier = Modifier
                         .background(
@@ -452,7 +474,8 @@ fun Calculator(
                     onClick = {
                         onAction(CalcAction.DecimalPoint)
                     })
-                CalcButton(calcSymbol = "=",
+                CalcButton(btnSymbol = "=",
+                    btnStyle = calcBtnStyle,
                     textColor = buttonTextColor,
                     modifier = Modifier
                         .background(
@@ -475,10 +498,11 @@ fun Calculator(
 
 @Composable
 fun CalcButton(
-    calcSymbol: String,
+    btnSymbol: String,
     modifier: Modifier,
-    onClick: () -> Unit,
+    btnStyle: TextStyle,
     textColor: Color = MaterialTheme.colorScheme.onBackground,
+    onClick: () -> Unit,
 ) {
     Box(contentAlignment = Alignment.Center,
         modifier = Modifier
@@ -487,8 +511,8 @@ fun CalcButton(
             }
             .then(modifier)) {
         Text(
-            text = calcSymbol,
-            style = MaterialTheme.typography.headlineSmall,
+            text = btnSymbol,
+            style = btnStyle,
             color = textColor
         )
     }

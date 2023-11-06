@@ -59,9 +59,7 @@ class calculatorViewModel: ViewModel() {
                 null -> return
             }
             state = state.copy(
-                number1 = result.toString().take(
-                    10
-                ), number2 = "", operation = null
+                number1 = result.toFloat().toString().take(13), number2 = "", operation = null
             )
             prettier()
         }
