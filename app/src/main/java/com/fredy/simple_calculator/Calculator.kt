@@ -27,7 +27,7 @@ fun Calculator(
     state: CalcState,
     modifier: Modifier = Modifier,
     btnSpacing: Dp = 10.dp,
-    onAction: (CalcAction) -> Unit,
+    onAction: (CalcEvent) -> Unit,
     calculatorShape: Shape = MaterialTheme.shapes.small,
     calcTextStyle: TextStyle = MaterialTheme.typography.displayLarge,
     calcBtnStyle: TextStyle = MaterialTheme.typography.headlineSmall,
@@ -92,7 +92,7 @@ fun Calculator(
                         )
                         .weight(1f),
                     onClick = {
-                        onAction(CalcAction.Clear)
+                        onAction(CalcEvent.Clear)
                     })
                 CalcButton(btnSymbol = "%",
                     btnStyle = calcBtnStyle,
@@ -108,7 +108,7 @@ fun Calculator(
                         )
                         .weight(1f),
                     onClick = {
-                        onAction(CalcAction.Percent)
+                        onAction(CalcEvent.Percent)
                     })
                 CalcButton(btnSymbol = "Del",
                     btnStyle = calcBtnStyle,
@@ -124,7 +124,7 @@ fun Calculator(
                         )
                         .weight(1f),
                     onClick = {
-                        onAction(CalcAction.Delete)
+                        onAction(CalcEvent.Delete)
                     })
                 CalcButton(btnSymbol = "/",
                     btnStyle = calcBtnStyle,
@@ -141,7 +141,7 @@ fun Calculator(
                         .weight(1f),
                     onClick = {
                         onAction(
-                            CalcAction.Operation(
+                            CalcEvent.Operation(
                                 CalcOperation.Divide
                             )
                         )
@@ -169,7 +169,7 @@ fun Calculator(
                         .weight(1f),
                     onClick = {
                         onAction(
-                            CalcAction.Number(
+                            CalcEvent.Number(
                                 "7"
                             )
                         )
@@ -189,7 +189,7 @@ fun Calculator(
                         .weight(1f),
                     onClick = {
                         onAction(
-                            CalcAction.Number(
+                            CalcEvent.Number(
                                 "8"
                             )
                         )
@@ -209,7 +209,7 @@ fun Calculator(
                         .weight(1f),
                     onClick = {
                         onAction(
-                            CalcAction.Number(
+                            CalcEvent.Number(
                                 "9"
                             )
                         )
@@ -229,7 +229,7 @@ fun Calculator(
                         .weight(1f),
                     onClick = {
                         onAction(
-                            CalcAction.Operation(
+                            CalcEvent.Operation(
                                 CalcOperation.Multiply
                             )
                         )
@@ -257,7 +257,7 @@ fun Calculator(
                         .weight(1f),
                     onClick = {
                         onAction(
-                            CalcAction.Number(
+                            CalcEvent.Number(
                                 "4"
                             )
                         )
@@ -277,7 +277,7 @@ fun Calculator(
                         .weight(1f),
                     onClick = {
                         onAction(
-                            CalcAction.Number(
+                            CalcEvent.Number(
                                 "5"
                             )
                         )
@@ -297,7 +297,7 @@ fun Calculator(
                         .weight(1f),
                     onClick = {
                         onAction(
-                            CalcAction.Number(
+                            CalcEvent.Number(
                                 "6"
                             )
                         )
@@ -317,7 +317,7 @@ fun Calculator(
                         .weight(1f),
                     onClick = {
                         onAction(
-                            CalcAction.Operation(
+                            CalcEvent.Operation(
                                 CalcOperation.Substract
                             )
                         )
@@ -345,7 +345,7 @@ fun Calculator(
                         .weight(1f),
                     onClick = {
                         onAction(
-                            CalcAction.Number(
+                            CalcEvent.Number(
                                 "1"
                             )
                         )
@@ -365,7 +365,7 @@ fun Calculator(
                         .weight(1f),
                     onClick = {
                         onAction(
-                            CalcAction.Number(
+                            CalcEvent.Number(
                                 "2"
                             )
                         )
@@ -385,7 +385,7 @@ fun Calculator(
                         .weight(1f),
                     onClick = {
                         onAction(
-                            CalcAction.Number(
+                            CalcEvent.Number(
                                 "3"
                             )
                         )
@@ -405,7 +405,7 @@ fun Calculator(
                         .weight(1f),
                     onClick = {
                         onAction(
-                            CalcAction.Operation(
+                            CalcEvent.Operation(
                                 CalcOperation.Add
                             )
                         )
@@ -433,7 +433,7 @@ fun Calculator(
                         .weight(1f),
                     onClick = {
                         onAction(
-                            CalcAction.Number(
+                            CalcEvent.Number(
                                 "0"
                             )
                         )
@@ -453,7 +453,7 @@ fun Calculator(
                         .weight(1f),
                     onClick = {
                         onAction(
-                            CalcAction.Number(
+                            CalcEvent.Number(
                                 "00"
                             )
                         )
@@ -472,7 +472,7 @@ fun Calculator(
                         )
                         .weight(1f),
                     onClick = {
-                        onAction(CalcAction.DecimalPoint)
+                        onAction(CalcEvent.DecimalPoint)
                     })
                 CalcButton(btnSymbol = "=",
                     btnStyle = calcBtnStyle,
@@ -488,7 +488,7 @@ fun Calculator(
                         )
                         .weight(1f),
                     onClick = {
-                        onAction(CalcAction.Calculate)
+                        onAction(CalcEvent.Calculate)
                     })
             }
         }

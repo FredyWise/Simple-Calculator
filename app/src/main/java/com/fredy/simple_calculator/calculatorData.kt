@@ -1,14 +1,13 @@
 package com.fredy.simple_calculator
 
-sealed class CalcAction {
-
-    data class Number (val number: String): CalcAction()
-    object Clear: CalcAction()
-    object Delete: CalcAction()
-    object DecimalPoint: CalcAction()
-    object Percent: CalcAction()
-    object Calculate: CalcAction()
-    data class Operation(val operation: CalcOperation): CalcAction()
+sealed class CalcEvent {
+    data class Number (val number: String): CalcEvent()
+    object Clear: CalcEvent()
+    object Delete: CalcEvent()
+    object DecimalPoint: CalcEvent()
+    object Percent: CalcEvent()
+    object Calculate: CalcEvent()
+    data class Operation(val operation: CalcOperation): CalcEvent()
 }
 
 sealed class CalcOperation (val symbol: String) {

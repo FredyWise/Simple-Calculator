@@ -4,25 +4,26 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
 
-class calculatorViewModel: ViewModel() {
-    var state by mutableStateOf(CalcState())
+class CalculatorViewModel(
+    initValue: String = "0"
+): ViewModel() {
+    var state by mutableStateOf(CalcState(number1 = initValue))
 
-    fun onAction(action: CalcAction) {
-        when (action) {
-            is CalcAction.Number -> enterNumber(
-                action.number
+    fun onAction(event: CalcEvent) {
+        when (event) {
+            is CalcEvent.Number -> enterNumber(
+                event.number
             )
-
-            is CalcAction.DecimalPoint -> enterDecimal()
-            is CalcAction.Clear -> state = CalcState()
-            is CalcAction.Operation -> enterOperation(
-                action.operation
+            is CalcEvent.DecimalPoint -> enterDecimal()
+            is CalcEvent.Clear -> state = CalcState()
+            is CalcEvent.Operation -> enterOperation(
+                event.operation
             )
-
-            is CalcAction.Calculate -> performCalculation()
-            is CalcAction.Delete -> performDeletion()
-            is CalcAction.Percent -> performPercent()
+            is CalcEvent.Calculate -> performCalculation()
+            is CalcEvent.Delete -> performDeletion()
+            is CalcEvent.Percent -> performPercent()
         }
 
     }
@@ -59,7 +60,9 @@ class calculatorViewModel: ViewModel() {
                 null -> return
             }
             state = state.copy(
-                number1 = result.toFloat().toString().take(13), number2 = "", operation = null
+                number1 = result.toString().take(
+                    10
+                ), number2 = "", operation = null
             )
             prettier()
         }
@@ -156,3 +159,12 @@ class calculatorViewModel: ViewModel() {
         private const val MAX_NUMBER_LENGTH = 13
     }
 }
+
+@Suppress("UNCHECKED_CAST")
+class CalculatorViewModelFactory(private val initValue: String): ViewModelProvider.Factory {
+    override fun <T: ViewModel> create(modelClass: Class<T>): T {
+        return CalculatorViewModel(initValue = initValue) as T
+    }
+}
+
+

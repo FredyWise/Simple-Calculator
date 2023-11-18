@@ -30,7 +30,7 @@ class MainActivity: ComponentActivity() {
 }
 
 @Composable
-fun Calculator_Screen(calculatorViewModel: calculatorViewModel = viewModel()) {
+fun Calculator_Screen(calculatorViewModel: CalculatorViewModel = viewModel()) {
     Surface(
         color = Color.Black,
         modifier = Modifier
