@@ -1,4 +1,4 @@
-package com.fredy.simple_calculator
+package com.fredy.simplebusinesscalculator
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -7,7 +7,8 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 
 class CalculatorViewModel(
-    initValue: String = "0"
+    initValue: String = "0",
+    val MAX_NUMBER_LENGTH: Int = 13
 ): ViewModel() {
     var state by mutableStateOf(CalcState(number1 = initValue))
 
@@ -155,15 +156,13 @@ class CalculatorViewModel(
         )
     }
 
-    companion object {
-        private const val MAX_NUMBER_LENGTH = 13
-    }
 }
 
+
 @Suppress("UNCHECKED_CAST")
-class CalculatorViewModelFactory(private val initValue: String): ViewModelProvider.Factory {
+class CalculatorViewModelFactory(private val initValue: String, private val MAX_NUMBER_LENGTH: Int): ViewModelProvider.Factory {
     override fun <T: ViewModel> create(modelClass: Class<T>): T {
-        return CalculatorViewModel(initValue = initValue) as T
+        return CalculatorViewModel(initValue = initValue, MAX_NUMBER_LENGTH = MAX_NUMBER_LENGTH) as T
     }
 }
 
