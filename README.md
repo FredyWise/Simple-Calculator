@@ -75,8 +75,8 @@ fun MyApp() {
 
 Use your custom ViewModel or modify the default one for personalized logic:
 
-```
-kotlinCopy codeimport com.simplecalculator.SimpleBusinessCalculator
+```kotlinCopy
+codeimport com.simplecalculator.SimpleBusinessCalculator
 import com.simplecalculator.CalculatorViewModel
 import androidx.lifecycle.viewmodel.compose.viewModel
 
