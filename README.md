@@ -247,11 +247,7 @@ Contributions to Simple-Calculator are welcome. Here’s how you can get involve
 
 7. **Create a Pull Request (PR)** on the main repository.
 
-Please ensure that your commits are descriptive and that your code follows the project's guidelines. For more details, see our [CONTRIBUTING.md](CONTRIBUTING.md) file.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+Please ensure that your commits are descriptive and that your code follows the project's guidelines. 
 
 ## Support
 
