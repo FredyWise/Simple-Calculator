@@ -216,7 +216,7 @@ Contributions to Simple-Calculator are welcome. Here’s how you can get involve
     to your local machine:
 
    ```sh
-   git clone https://github.com/your-username/Simple-Calculator.git
+   git clone https://github.com/fredywise/Simple-Calculator.git
    ```
 
 3. Create a new branch
