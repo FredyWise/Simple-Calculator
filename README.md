@@ -6,14 +6,25 @@
 
 ## Description
 
-Simple-Calculator is a modern, fully customizable calculator component for Android applications, built using Kotlin, Jetpack Compose, and Material3. It is designed to be easily integrated into various projects, providing a robust and aesthetically pleasing calculator UI and logic. Developers can tailor the look and feel to match their application's theme and can extend or replace the built-in ViewModel with their custom logic.
+Business Calculator from the Simple-Calculator Series is a modern, fully customizable calculator component designed for Android applications. It is tailored to make money calculations easy, offering a streamlined solution for business or personal financial tasks. Built using Kotlin, Jetpack Compose, and Material3, this component seamlessly integrates into your projects and adapts to your application's look and feel.
+
+Key aspects of Simple-Calculator include:
+
+- **Primary Use**: Ideal for straightforward money calculations, making it a practical tool for business applications.
+- **Customizable UI**: Adjust the calculator's colors, shapes, and text styles to align with your app's theme.
+- **Flexible Logic**: Utilize the built-in ViewModel or replace it with your custom ViewModel for personalized logic.
+- **Composable Function**: The `SimpleBusinessCalculator` composable function ensures easy integration into Compose-based projects.
+- **Open Source**: Modify and extend the component under the MIT license to suit your needs.
 
 ## Features
 
-- **Customizable UI**: Easily adjust colors, shapes, and text styles to fit your application's design.
-- **Flexible Logic**: Use the default ViewModel or integrate your custom ViewModel to handle calculator logic.
-- **Composable Function**: Utilize the `SimpleBusinessCalculator` composable for seamless integration into Compose-based projects.
-- **Open Source**: Extend and adapt the component as needed under the MIT license.
+  - **Business Focused**: Simplifies money calculations for business and personal use.
+  - **Customizable Appearance**: Easily change UI elements to fit your design.
+  - **Flexible Logic**: Use default or custom ViewModels.
+  - **Easy Integration**: Add the `SimpleBusinessCalculator` composable to your Compose projects.
+  - **Open Source**: Freely available under the MIT license for modification and extension.
+
+
 
 ## Installation
 
