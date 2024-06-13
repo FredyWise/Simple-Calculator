@@ -1,7 +1,7 @@
 # Simple-Calculator
-<div style="display: flex; justify-content: center; align-items: center; height: 400px;">
-  <img src="https://github.com/FredyWise/Simple-Calculator/assets/84549992/2bbca335-f691-4db3-9e5e-8eb892830184" alt="Image description" style="max-width: 100%; height: auto;">
-</div>
+<img src="https://github.com/FredyWise/Simple-Calculator/assets/84549992/2bbca335-f691-4db3-9e5e-8eb892830184" 
+     alt="Image description" 
+     style="display: block; margin: 0 auto; height: 400px;">
 
 
 ## Description
