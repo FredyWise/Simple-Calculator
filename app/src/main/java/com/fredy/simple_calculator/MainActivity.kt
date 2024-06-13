@@ -10,6 +10,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import com.fredy.simple_calculator.ui.theme.SimpleCalculatorTheme
 
+
 class MainActivity: ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,6 +29,6 @@ fun Calculator_Screen() {
         color = Color.Black,
         modifier = Modifier.fillMaxSize()
     ) {
-
+        SimpleBusinessCalculator()
     }
 }

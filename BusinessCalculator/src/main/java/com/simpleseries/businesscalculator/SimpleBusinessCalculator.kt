@@ -1,4 +1,4 @@
-package com.fredy.simplebusinesscalculator
+package com.simpleseries.businesscalculator
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
