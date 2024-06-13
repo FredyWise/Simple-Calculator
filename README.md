@@ -215,9 +215,7 @@ Contributions to Simple-Calculator are welcome. Here’s how you can get involve
 
     to your local machine:
 
-   ```
-   sh
-   Copy code
+   ```sh
    git clone https://github.com/your-username/Simple-Calculator.git
    ```
 
@@ -225,9 +223,7 @@ Contributions to Simple-Calculator are welcome. Here’s how you can get involve
 
     for your changes:
 
-   ```
-   sh
-   Copy code
+   ```sh
    git checkout -b feature-branch
    ```
 
@@ -237,9 +233,7 @@ Contributions to Simple-Calculator are welcome. Here’s how you can get involve
 
     with a clear and concise message:
 
-   ```
-   sh
-   Copy code
+   ```sh
    git commit -m "Brief description of your changes"
    ```
 
@@ -247,9 +241,7 @@ Contributions to Simple-Calculator are welcome. Here’s how you can get involve
 
     to your forked repository:
 
-   ```
-   sh
-   Copy code
+   ```sh
    git push origin feature-branch
    ```
 
