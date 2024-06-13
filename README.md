@@ -25,7 +25,7 @@ To add Simple-Calculator to your project using JitPack, follow these steps:
 Include JitPack in your project’s root `build.gradle` at the end of the repositories section:
 
 ```gradle
-codedependencyResolutionManagement {
+dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         mavenCentral()
@@ -39,7 +39,7 @@ codedependencyResolutionManagement {
 Add the following line to your module's `build.gradle` dependencies:
 
 ```gradle
-codedependencies {
+dependencies {
     implementation("com.github.FredyWise:Simple-Calculator:Tag")
 }
 ```
@@ -49,7 +49,7 @@ Replace `Tag` with the latest version tag from the [JitPack page](https://www.ji
 For example, if the latest version is `0.0.9`, your dependency line will look like this:
 
 ```gradle
-codedependencies {
+dependencies {
     implementation("com.github.FredyWise:Simple-Calculator:0.0.9")
 }
 ```
@@ -62,8 +62,8 @@ Integrate the Simple-Calculator component into your application with ease:
 
 To quickly add a basic calculator UI to your Compose project:
 
-```
-kotlinCopy codeimport com.simplecalculator.SimpleBusinessCalculator
+```kotlin
+import com.simplecalculator.SimpleBusinessCalculator
 
 @Composable
 fun MyApp() {
@@ -75,8 +75,8 @@ fun MyApp() {
 
 Use your custom ViewModel or modify the default one for personalized logic:
 
-```kotlinCopy
-codeimport com.simplecalculator.SimpleBusinessCalculator
+```kotlin
+import com.simplecalculator.SimpleBusinessCalculator
 import com.simplecalculator.CalculatorViewModel
 import androidx.lifecycle.viewmodel.compose.viewModel
 
@@ -89,8 +89,8 @@ fun MyCustomApp() {
 
 Or initialize the ViewModel with specific parameters:
 
-```
-kotlinCopy codeimport com.simplecalculator.SimpleBusinessCalculator
+```kotlin
+import com.simplecalculator.SimpleBusinessCalculator
 import com.simplecalculator.CalculatorViewModel
 import com.simplecalculator.CalculatorViewModelFactory
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -106,8 +106,8 @@ fun MyFactoryApp() {
 
 Tailor the calculator's appearance using various parameters:
 
-```
-kotlinCopy codeimport com.simplecalculator.SimpleBusinessCalculator
+```kotlin
+import com.simplecalculator.SimpleBusinessCalculator
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -160,8 +160,8 @@ Explore different ways to utilize Simple-Calculator:
 
 ### Basic Example
 
-```
-kotlinCopy codeimport com.simplecalculator.SimpleBusinessCalculator
+```kotlin
+import com.simplecalculator.SimpleBusinessCalculator
 
 @Composable
 fun BasicCalculatorApp() {
@@ -171,8 +171,8 @@ fun BasicCalculatorApp() {
 
 ### Advanced Customization
 
-```
-kotlinCopy codeimport com.simplecalculator.SimpleBusinessCalculator
+```kotlin
+import com.simplecalculator.SimpleBusinessCalculator
 import com.simplecalculator.CalculatorViewModel
 
 @Composable
@@ -191,8 +191,8 @@ fun AdvancedCalculatorApp() {
 
 ### Themed Example
 
-```
-kotlinCopy codeimport com.simplecalculator.SimpleBusinessCalculator
+```kotlin
+import com.simplecalculator.SimpleBusinessCalculator
 
 @Composable
 fun ThemedCalculatorApp() {
