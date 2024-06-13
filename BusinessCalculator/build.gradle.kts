@@ -63,7 +63,8 @@ afterEvaluate {
         }
 
 //        if using bar
-//        repositories {
+        repositories {
+            maven { url = uri("https://jitpack.io") }
 //            //bellow are move to settings.gradle.kts
 //            maven {
 //                name = "GitHubPackages"
@@ -73,6 +74,6 @@ afterEvaluate {
 //                    password = System.getenv("GITHUB_TOKEN")
 //                }
 //            }
-//        }
+        }
     }
 }
