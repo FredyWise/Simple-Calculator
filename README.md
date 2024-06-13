@@ -8,7 +8,7 @@
 
 Business Calculator from the Simple-Calculator Series is a modern, fully customizable calculator component designed for Android applications. It is tailored to make money calculations easy, offering a streamlined solution for business or personal financial tasks. Built using Kotlin, Jetpack Compose, and Material3, this component seamlessly integrates into your projects and adapts to your application's look and feel.
 
-Key aspects of Simple-Calculator include:
+Key aspects of Simple Business Calculator include:
 
 - **Primary Use**: Ideal for straightforward money calculations, making it a practical tool for business applications.
 - **Customizable UI**: Adjust the calculator's colors, shapes, and text styles to align with your app's theme.
