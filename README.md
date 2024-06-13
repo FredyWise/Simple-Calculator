@@ -1,16 +1,5 @@
 # Simple-Calculator
-.image-container {
-  display: flex;
-  justify-content: center;
-  align-items: center; /* Centers image vertically */
-  height: 400px; /* Sets image height */
-}
-
-.image-container img {
-  max-width: 100%; /* Ensures image doesn't overflow container */
-  height: auto; /* Maintains image aspect ratio */
-}
-
+<link rel="stylesheet" href="readme.css">
 
 <div class="image-container">
   <img src="https://github.com/FredyWise/Simple-Calculator/assets/84549992/2bbca335-f691-4db3-9e5e-8eb892830184" alt="Image description">
