@@ -54,7 +54,7 @@ afterEvaluate {
             create<MavenPublication>("release") {// could be bar or release
                 groupId = "com.github.fredywise.simpleseries"
                 artifactId = "business-calculator"
-                version = "0.0.2"
+                version = "0.0.3"
 ////                if using bar // you can get this by running assemble on Gradle/BusinessCalculator/Tasks/build/assembleRelease
 //                artifact("$buildDir/outputs/aar/${project.name}-release.aar")
 //                if using release
