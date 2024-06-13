@@ -1,7 +1,7 @@
 # Simple-Calculator
 
 
-![image](https://github.com/FredyWise/Simple-Calculator/assets/84549992/2bbca335-f691-4db3-9e5e-8eb892830184)
+![image | 300](https://github.com/FredyWise/Simple-Calculator/assets/84549992/2bbca335-f691-4db3-9e5e-8eb892830184)
 
 
 
