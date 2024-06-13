@@ -67,9 +67,9 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 // // if using local project
-//    implementation(project(":BusinessCalculator"))
+    implementation(project(":BusinessCalculator"))
     // // if using remote jitpack release
-    implementation ("com.github.FredyWise:Simple-Calculator:0.0.2")
+//    implementation ("com.github.FredyWise:Simple-Calculator:0.0.2")
     // // if using remote maven bar
 //    implementation("com.github.FredyWise:business-calculator:0.0.2")
 }
