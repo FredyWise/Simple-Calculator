@@ -18,32 +18,41 @@ Simple-Calculator is a modern, fully customizable calculator component for Andro
 
 ## Installation
 
-To add Simple-Calculator to your project, follow these steps:
+To add Simple-Calculator to your project using JitPack, follow these steps:
 
-### Prerequisites
+### Step 1. Add the JitPack repository
 
-- **Kotlin**: Ensure your project is set up to use Kotlin.
-- **Gradle**: Your project should be configured to use Gradle for dependency management.
+Include JitPack in your project’s root `build.gradle` at the end of the repositories section:
 
-### Steps
+```gradle
+codedependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        mavenCentral()
+        maven(url = "https://www.jitpack.io")
+    }
+}
+```
 
-1. **Add Maven Central repository** to your `build.gradle` file:
+### Step 2. Add the Simple-Calculator dependency
 
-   ```
-   gradleCopy coderepositories {
-       mavenCentral()
-   }
-   ```
+Add the following line to your module's `build.gradle` dependencies:
 
-2. **Include the Simple-Calculator dependency**:
+```gradle
+codedependencies {
+    implementation("com.github.FredyWise:Simple-Calculator:Tag")
+}
+```
 
-   ```
-   gradleCopy codedependencies {
-       implementation 'com.simple-calculator:simple-business-calculator:0.0.1'
-   }
-   ```
+Replace `Tag` with the latest version tag from the [JitPack page](https://www.jitpack.io/#FredyWise/Simple-Calculator). You can find the most recent version there or automate this with a GitHub Action to always use the latest release.
 
-3. **Sync your project** with Gradle to download and include the Simple-Calculator library.
+For example, if the latest version is `0.0.9`, your dependency line will look like this:
+
+```gradle
+codedependencies {
+    implementation("com.github.FredyWise:Simple-Calculator:0.0.9")
+}
+```
 
 ## Usage
 
