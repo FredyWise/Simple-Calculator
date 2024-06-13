@@ -51,25 +51,28 @@ dependencies {
 afterEvaluate {
     publishing {
         publications {
-            create<MavenPublication>("bar") {
-                groupId = "com.simpleseries"
+            create<MavenPublication>("release") {// could be bar or release
+                groupId = "com.github.fredywise.simpleseries"
                 artifactId = "business-calculator"
-                version = "0.0.1"
-                artifact("$buildDir/outputs/aar/${project.name}-release.aar")
-//                if using release instead of bar
-//                from(components["release"])
+                version = "0.0.2"
+////                if using bar // you can get this by running assemble on Gradle/BusinessCalculator/Tasks/build/assembleRelease
+//                artifact("$buildDir/outputs/aar/${project.name}-release.aar")
+//                if using release
+                from(components["release"])
             }
         }
-        //bellow are move to settings.gradle.kts
-        repositories {
-            maven {
-                name = "GitHubPackages"
-                url = uri("https://maven.pkg.github.com/FredyWise/Simple-Calculator")
-                credentials {
-                    username = System.getenv("GITHUB_USERNAME")
-                    password = System.getenv("GITHUB_TOKEN")
-                }
-            }
-        }
+
+//        if using bar
+//        repositories {
+//            //bellow are move to settings.gradle.kts
+//            maven {
+//                name = "GitHubPackages"
+//                url = uri("https://maven.pkg.github.com/FredyWise/Simple-Calculator")
+//                credentials {
+//                    username = System.getenv("GITHUB_USERNAME")
+//                    password = System.getenv("GITHUB_TOKEN")
+//                }
+//            }
+//        }
     }
 }

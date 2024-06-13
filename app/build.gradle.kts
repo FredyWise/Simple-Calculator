@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("maven-publish")
 }
 
 android {
@@ -66,9 +67,10 @@ dependencies {
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
-
-//    implementation(project(":SimpleBusinessCalculator"))
-
-
-    implementation("com.fredy:simple-business-calculator:0.0.1")
+// // if using local project
+    implementation(project(":BusinessCalculator"))
+    // // if using remote jitpack release
+//    implementation ("com.github.FredyWise:Simple-Calculator:0.0.2")
+    // // if using remote maven bar
+//    implementation("com.github.FredyWise:business-calculator:0.0.2")
 }
