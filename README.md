@@ -1,49 +1,68 @@
 # Simple-Calculator
-
-
-![image](https://github.com/FredyWise/Simple-Calculator/assets/84549992/2bbca335-f691-4db3-9e5e-8eb892830184)
-
+<img src="https://github.com/FredyWise/Simple-Calculator/assets/84549992/2bbca335-f691-4db3-9e5e-8eb892830184" 
+     alt="Image description" 
+     style="display: block; margin: 0 auto; height: 400px;">
 
 
 ## Description
 
-Simple-Calculator is a modern, fully customizable calculator component for Android applications, built using Kotlin, Jetpack Compose, and Material3. It is designed to be easily integrated into various projects, providing a robust and aesthetically pleasing calculator UI and logic. Developers can tailor the look and feel to match their application's theme and can extend or replace the built-in ViewModel with their custom logic.
+Business Calculator from the Simple-Calculator Series is a modern, fully customizable calculator component designed for Android applications. It is tailored to make money calculations easy, offering a streamlined solution for business or personal financial tasks. Built using Kotlin, Jetpack Compose, and Material3, this component seamlessly integrates into your projects and adapts to your application's look and feel.
+
+Key aspects of Simple Business Calculator include:
+
+- **Primary Use**: Ideal for straightforward money calculations, making it a practical tool for business applications.
+- **Customizable UI**: Adjust the calculator's colors, shapes, and text styles to align with your app's theme.
+- **Flexible Logic**: Utilize the built-in ViewModel or replace it with your custom ViewModel for personalized logic.
+- **Composable Function**: The `SimpleBusinessCalculator` composable function ensures easy integration into Compose-based projects.
+- **Open Source**: Modify and extend the component under the MIT license to suit your needs.
 
 ## Features
 
-- **Customizable UI**: Easily adjust colors, shapes, and text styles to fit your application's design.
-- **Flexible Logic**: Use the default ViewModel or integrate your custom ViewModel to handle calculator logic.
-- **Composable Function**: Utilize the `SimpleBusinessCalculator` composable for seamless integration into Compose-based projects.
-- **Open Source**: Extend and adapt the component as needed under the MIT license.
+  - **Business Focused**: Simplifies money calculations for business and personal use.
+  - **Customizable Appearance**: Easily change UI elements to fit your design.
+  - **Flexible Logic**: Use default or custom ViewModels.
+  - **Easy Integration**: Add the `SimpleBusinessCalculator` composable to your Compose projects.
+  - **Open Source**: Freely available under the MIT license for modification and extension.
+
+
 
 ## Installation
 
-To add Simple-Calculator to your project, follow these steps:
+To add Simple-Calculator to your project using JitPack, follow these steps:
 
-### Prerequisites
+### Step 1. Add the JitPack repository
 
-- **Kotlin**: Ensure your project is set up to use Kotlin.
-- **Gradle**: Your project should be configured to use Gradle for dependency management.
+Include JitPack in your project’s root `build.gradle` at the end of the repositories section:
 
-### Steps
+```gradle
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        mavenCentral()
+        maven(url = "https://www.jitpack.io")
+    }
+}
+```
 
-1. **Add Maven Central repository** to your `build.gradle` file:
+### Step 2. Add the Simple-Calculator dependency
 
-   ```
-   gradleCopy coderepositories {
-       mavenCentral()
-   }
-   ```
+Add the following line to your module's `build.gradle` dependencies:
 
-2. **Include the Simple-Calculator dependency**:
+```gradle
+dependencies {
+    implementation("com.github.FredyWise:Simple-Calculator:Tag")
+}
+```
 
-   ```
-   gradleCopy codedependencies {
-       implementation 'com.simple-calculator:simple-business-calculator:0.0.1'
-   }
-   ```
+Replace `Tag` with the latest version tag from the [JitPack page](https://www.jitpack.io/#FredyWise/Simple-Calculator). You can find the most recent version there or automate this with a GitHub Action to always use the latest release.
 
-3. **Sync your project** with Gradle to download and include the Simple-Calculator library.
+For example, if the latest version is `0.0.9`, your dependency line will look like this:
+
+```gradle
+dependencies {
+    implementation("com.github.FredyWise:Simple-Calculator:0.0.9")
+}
+```
 
 ## Usage
 
@@ -53,8 +72,8 @@ Integrate the Simple-Calculator component into your application with ease:
 
 To quickly add a basic calculator UI to your Compose project:
 
-```
-kotlinCopy codeimport com.simplecalculator.SimpleBusinessCalculator
+```kotlin
+import com.simplecalculator.SimpleBusinessCalculator
 
 @Composable
 fun MyApp() {
@@ -66,8 +85,8 @@ fun MyApp() {
 
 Use your custom ViewModel or modify the default one for personalized logic:
 
-```
-kotlinCopy codeimport com.simplecalculator.SimpleBusinessCalculator
+```kotlin
+import com.simplecalculator.SimpleBusinessCalculator
 import com.simplecalculator.CalculatorViewModel
 import androidx.lifecycle.viewmodel.compose.viewModel
 
@@ -80,8 +99,8 @@ fun MyCustomApp() {
 
 Or initialize the ViewModel with specific parameters:
 
-```
-kotlinCopy codeimport com.simplecalculator.SimpleBusinessCalculator
+```kotlin
+import com.simplecalculator.SimpleBusinessCalculator
 import com.simplecalculator.CalculatorViewModel
 import com.simplecalculator.CalculatorViewModelFactory
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -97,8 +116,8 @@ fun MyFactoryApp() {
 
 Tailor the calculator's appearance using various parameters:
 
-```
-kotlinCopy codeimport com.simplecalculator.SimpleBusinessCalculator
+```kotlin
+import com.simplecalculator.SimpleBusinessCalculator
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -151,8 +170,8 @@ Explore different ways to utilize Simple-Calculator:
 
 ### Basic Example
 
-```
-kotlinCopy codeimport com.simplecalculator.SimpleBusinessCalculator
+```kotlin
+import com.simplecalculator.SimpleBusinessCalculator
 
 @Composable
 fun BasicCalculatorApp() {
@@ -162,8 +181,8 @@ fun BasicCalculatorApp() {
 
 ### Advanced Customization
 
-```
-kotlinCopy codeimport com.simplecalculator.SimpleBusinessCalculator
+```kotlin
+import com.simplecalculator.SimpleBusinessCalculator
 import com.simplecalculator.CalculatorViewModel
 
 @Composable
@@ -182,8 +201,8 @@ fun AdvancedCalculatorApp() {
 
 ### Themed Example
 
-```
-kotlinCopy codeimport com.simplecalculator.SimpleBusinessCalculator
+```kotlin
+import com.simplecalculator.SimpleBusinessCalculator
 
 @Composable
 fun ThemedCalculatorApp() {
@@ -206,19 +225,15 @@ Contributions to Simple-Calculator are welcome. Here’s how you can get involve
 
     to your local machine:
 
-   ```
-   sh
-   Copy code
-   git clone https://github.com/your-username/Simple-Calculator.git
+   ```sh
+   git clone https://github.com/fredywise/Simple-Calculator.git
    ```
 
 3. Create a new branch
 
     for your changes:
 
-   ```
-   sh
-   Copy code
+   ```sh
    git checkout -b feature-branch
    ```
 
@@ -228,9 +243,7 @@ Contributions to Simple-Calculator are welcome. Here’s how you can get involve
 
     with a clear and concise message:
 
-   ```
-   sh
-   Copy code
+   ```sh
    git commit -m "Brief description of your changes"
    ```
 
@@ -238,9 +251,7 @@ Contributions to Simple-Calculator are welcome. Here’s how you can get involve
 
     to your forked repository:
 
-   ```
-   sh
-   Copy code
+   ```sh
    git push origin feature-branch
    ```
 
